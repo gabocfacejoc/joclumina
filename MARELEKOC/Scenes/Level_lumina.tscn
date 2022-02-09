@@ -1,0 +1,207 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Untitled.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 25.9615
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 23.5, 24.5 )
+
+[sub_resource type="OccluderPolygon2D" id=3]
+polygon = PoolVector2Array( -31, -30, 29, -32, 29, 28, -31, 29 )
+
+[node name="Level_lumina" type="Node2D"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+color = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( 519, 286 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+rotation = 1.5708
+texture = ExtResource( 2 )
+
+[node name="Light2D" type="Light2D" parent="Player"]
+position = Vector2( 38, 27 )
+rotation = 1.5708
+texture = ExtResource( 3 )
+energy = 4.26
+shadow_enabled = true
+
+[node name="Obstacol" type="StaticBody2D" parent="."]
+position = Vector2( 224, 193 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol2" type="StaticBody2D" parent="."]
+position = Vector2( 344, 401 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol2"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol2"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol2"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol4" type="StaticBody2D" parent="."]
+position = Vector2( 575, 436 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol4"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol4"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol4"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol5" type="StaticBody2D" parent="."]
+position = Vector2( 645, 283 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol5"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol5"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol5"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol6" type="StaticBody2D" parent="."]
+position = Vector2( 706, 283 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol6"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol6"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol6"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol7" type="StaticBody2D" parent="."]
+position = Vector2( 646, 224 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol7"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol7"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol7"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol8" type="StaticBody2D" parent="."]
+position = Vector2( 559, 142 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol8"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol8"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol8"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol9" type="StaticBody2D" parent="."]
+position = Vector2( 435, 138 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol9"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol9"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol9"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol10" type="StaticBody2D" parent="."]
+position = Vector2( 225, 253 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol10"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol10"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol10"]
+occluder = SubResource( 3 )
+
+[node name="Obstacol3" type="StaticBody2D" parent="."]
+position = Vector2( 498, 142 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Obstacol3"]
+shape = SubResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="Obstacol3"]
+modulate = Color( 0.0352941, 0.0352941, 0.0352941, 1 )
+texture = ExtResource( 2 )
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="Obstacol3"]
+occluder = SubResource( 3 )
